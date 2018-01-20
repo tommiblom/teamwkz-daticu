@@ -1,0 +1,1 @@
+select * from measurement where measurement_concept_id=3016502 and value_source_value in (select distinct value_source_value from measurement where measurement_concept_id=3016502 group by value_source_value having count(value_source_value)>200)
